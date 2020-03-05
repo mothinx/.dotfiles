@@ -1,3 +1,3 @@
-# git
-alias gs="git status"
-alias gcmsg="git commit -m msg"
+alias gs='git status'
+alias gp='git push'
+alias gc='git commit'
