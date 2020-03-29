@@ -9,5 +9,8 @@ echo "Cloning bash-git-prompt Github repository..."
 # Install xclip
 sudo apt-get install xclip
 
+# Python
+sudo apt-get install python3-pip
+
 # Sync files
 # TODO: Call sync script
