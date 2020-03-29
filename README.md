@@ -1,5 +1,4 @@
-
-tfiles
+# My Dotfiles
 
 This is a personal repository and you should use it carrefully. It's all about my personal working/gaming/anything environment. It's a mess.
 
