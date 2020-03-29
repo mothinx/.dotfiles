@@ -1,8 +1,13 @@
 #!/bin/bash
 
+sudo apt-get update
+
 # Install git prompt in home
 echo "Cloning bash-git-prompt Github repository..."
 [ ! -d "$HOME/.bash-git-prompt" ] && git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
+
+# Install xclip
+sudo apt-get install xclip
 
 # Sync files
 # TODO: Call sync script
