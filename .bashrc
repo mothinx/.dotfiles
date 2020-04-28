@@ -1,7 +1,9 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-
+if test -t 1; then
+exec zsh
+fi
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -114,10 +116,4 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
-fi
-
-# Bash git prompt (https://github.com/magicmonty/bash-git-prompt)
-if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
-	    GIT_PROMPT_ONLY_IN_REPO=1
-	        source $HOME/.bash-git-prompt/gitprompt.sh
 fi
