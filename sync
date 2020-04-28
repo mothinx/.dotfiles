@@ -2,5 +2,4 @@
 rsync ~/.dotfiles/.bashrc ~
 rsync ~/.dotfiles/.bash_aliases ~
 rsync ~/.dotfiles/.zshrc ~
-# TODO: need to find a way to source ./bashrc after sync
 . ~/.bashrc
