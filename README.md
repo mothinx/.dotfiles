@@ -7,7 +7,13 @@ Here is my initial configuration:
 - Terminal from Windows Store
 - Ubuntu (didn't try an other distro)
 
+## Scripts
+trello.py
+Used to create a card in a Trello Board using a commandLine
+You need to set environment variables TRELLO_API_KEY / TRELLO_TOKEN / GTD_INBOX_ID
+usage:  python3 trello.py Your_Card_Name
 ### Todos
+[ ] I need a wrapper to run on WSL my python script trello.py
 You can see todos on Issues tab. Maybe you can help me and contribute to it :-)
 
 License
