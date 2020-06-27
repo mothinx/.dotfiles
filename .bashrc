@@ -117,3 +117,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# My Secret keys (on .gitignore)
+if [ -f ~/.secret ]; then
+    . ~/.secret
+fi

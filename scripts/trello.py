@@ -4,9 +4,13 @@ import requests
 import os
 
 def main():
+    
+    # KEYS FROM ENVIRONMENT
     api_key = os.getenv('TRELLO_API_KEY')
     token = os.getenv('TRELLO_TOKEN')
     inbox_board_id = os.getenv('GTD_INBOX_ID')
+
+
     if(len(sys.argv) != 2):
         print('Usage: python3 trello.py Nom_De_Votre_Carte')
     if(api_key == None or token == None):
