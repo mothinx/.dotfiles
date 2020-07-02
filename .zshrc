@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/mothinx/.oh-my-zsh"
+export ZSH="/home/jgracia/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -97,7 +97,8 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 alias gtd="python3 ~/.dotfiles/scripts/trello.py"
-
+alias agecapDir="cd /mnt/d/code/agecap/agecap"
+alias decaDir="cd /mnt/d/code/deca/deca"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"

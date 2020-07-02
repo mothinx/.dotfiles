@@ -1,5 +1,3 @@
 #!/bin/bash
-rsync ~/.dotfiles/.bashrc ~
-rsync ~/.dotfiles/.bash_aliases ~
 rsync ~/.dotfiles/.zshrc ~
-. ~/.bashrc
+. ~/.zshrc
