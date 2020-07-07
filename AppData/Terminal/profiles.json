@@ -13,7 +13,10 @@
         {
             "colorScheme": "Dracula",
 	    "useAcrylic" : true,
-            "acrylicOpacity" : 0.75
+            "acrylicOpacity" : 0.75,
+	    "fontFace" : "Fira Code",
+	    "fontSize" : 12,
+	    "padding" : "0, 0, 0, 0"
         },
         "list":
         [
