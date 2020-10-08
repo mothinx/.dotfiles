@@ -1,26 +1,23 @@
 # My Dotfiles
 
-This is a personal repository and you should use it carrefully. It's all about my personal working/gaming/anything environment. 
+This is a personal repository and you should use it carrefully. 
+
+It's all about my personal working/gaming/anything setup environment.
 
 It's a mess.
 
-Here is my initial configuration:
-- Windows 10 updated
-- Terminal from Windows Store
-- Ubuntu (didn't try an other distro)
+## Why dotfiles ?
+- To automatise a fresh Linux installation, even if it's on Linux or WSL
+- To synchronise my dotfiles between my desktop computer running Linux, my personal laptop running Linux and my working laptop running WSL2.
 
-## Scripts
+## Usefull Scripts
 
-### Trello.py
+### ***```/scripts/trello.py```***
 
-Used to create a card in a Trello Board using a commandLine.
+Used to create a card in a specific list using  commandline.
+
 #### Configuration:
 You need to set environment variables **TRELLO_API_KEY / TRELLO_TOKEN / GTD_INBOX_ID**
 #### How to Use:
   ```python3 trello.py Your_Card_Name```
-## Todos
 
-License
-----
-MIT
-**Free Software, Hell Yeah!**
