@@ -93,12 +93,13 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-alias gtd="python3 ~/.dotfiles/scripts/trello.py"
-alias agecapDir="cd /mnt/d/code/agecap/agecap"
-alias decaDir="cd /mnt/d/code/deca/deca"
+
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gtd="python3 ~/.dotfiles/scripts/trello.py"
+alias code="/mnt/c/Program\ Files/Microsoft\ VS\ Code/bin/code"
 
 # Secret env variables
 source ~/.dotfiles/.secret
