@@ -1,4 +1,4 @@
-$Packages = 'googlechrome', 'geforce-experience', 'steam', 'origin', 'git', 'keepass', 'discord', 'vscode', 'python3', 'eclipse', 'openjdk8', 'hwmonitor', 'racket'
+$Packages = 'googlechrome', 'geforce-experience', 'google-drive-file-stream', 'keepassxc', 'steam', 'git', 'discord', 'vscode', 'python3', 'openjdk8', 'hwmonitor', 'intellijidea' 
 
 Function installPackages($Packages) {
     ForEach ($PackageName in $Packages)
