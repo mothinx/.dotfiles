@@ -12,7 +12,7 @@ Winget: https://docs.microsoft.com/fr-fr/windows/package-manager/
 
 Microsoft PowerToys: https://docs.microsoft.com/fr-fr/windows/powertoys/
 
-## Usefull Scripts
+## Scripts
 
 ### ***```/scripts/trello.py```***
 
