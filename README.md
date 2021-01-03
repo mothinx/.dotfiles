@@ -6,9 +6,9 @@ It's all about my personal working/gaming/anything setup environment.
 
 It's a mess.
 
-## Why dotfiles ?
-- To automatise a fresh Linux installation, even if it's on Linux or WSL
-- To synchronise my dotfiles between my desktop computer running Linux, my personal laptop running Linux and my working laptop running WSL2.
+## Links
+Winget: https://docs.microsoft.com/fr-fr/windows/package-manager/
+Microsoft PowerToys: https://docs.microsoft.com/fr-fr/windows/powertoys/
 
 ## Usefull Scripts
 
