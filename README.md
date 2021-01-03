@@ -7,7 +7,9 @@ It's all about my personal working/gaming/anything setup environment.
 It's a mess.
 
 ## Links
+
 Winget: https://docs.microsoft.com/fr-fr/windows/package-manager/
+
 Microsoft PowerToys: https://docs.microsoft.com/fr-fr/windows/powertoys/
 
 ## Usefull Scripts
