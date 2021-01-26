@@ -67,7 +67,7 @@ ZSH_THEME="wedisagree"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
+plugins=(git
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -101,8 +101,8 @@ source $ZSH/oh-my-zsh.sh
 alias gtd="python3 ~/.dotfiles/scripts/trello.py"
 alias code="/mnt/c/Program\ Files/Microsoft\ VS\ Code/bin/code"
 
-# Secret env variables
-source ~/.dotfiles/.secret
+# env variables
+source ~/.env
 
 # Nvm
 export NVM_DIR=~/.nvm
