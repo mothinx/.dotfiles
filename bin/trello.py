@@ -3,15 +3,16 @@ import sys
 import requests
 import os
 
-'''
+
+def main():
+    '''
 Add a new card with the given title in the list / board stored in environment variables
 Environment variables to set:
 TRELLO_API_KEY: Your trello api key
 TRELLO_TOKEN: Your trello api token
 GTD_INBOX_ID: The id of the list where you add the new add
 '''
-def main():
-    
+
     # KEYS FROM ENVIRONMENT
     api_key = os.getenv('TRELLO_API_KEY')
     token = os.getenv('TRELLO_TOKEN')
