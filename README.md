@@ -11,7 +11,8 @@ PopOs
 1. Make your ssh key stuff
 2. Clone this repo
 3. I use stow to symlink
-``` #cd .dotfiles
+``` 
+    #cd .dotfiles
     #stow script
     #stow zsh
 ```
