@@ -13,6 +13,8 @@ PopOs
 3. I use stow to symlink
 ``` 
     #cd .dotfiles
-    #stow script
+    #stow git
     #stow zsh
+    #stow script
+    
 ```
