@@ -18,3 +18,6 @@ PopOs
     #stow script
     
 ```
+
+## Fonts
+ - Iosevka

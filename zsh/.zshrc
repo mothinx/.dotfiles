@@ -3,6 +3,7 @@
 # Path to oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+ZSH_THEME="random"
 
 source $ZSH/oh-my-zsh.sh
 
