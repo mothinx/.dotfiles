@@ -4,7 +4,7 @@
 This is my personal config files and you should use it carefully.
 
 ## System
-PopOs
+Arch
 
 ## Install
 
@@ -15,9 +15,8 @@ PopOs
     #cd .dotfiles
     #stow git
     #stow zsh
-    #stow script
+    #stow i3
+    etc...
     
 ```
 
-## Fonts
- - Iosevka
