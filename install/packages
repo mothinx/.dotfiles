@@ -28,6 +28,8 @@ linux-firmware
 linux-headers
 m4
 make
+man-db
+man-pages
 nautilus
 neofetch
 network-manager-applet
@@ -45,6 +47,7 @@ stow
 sudo
 terminus-font
 texinfo
+tree
 vim
 which
 wpa_supplicant
