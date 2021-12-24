@@ -194,7 +194,7 @@ gaps inner 15
 gaps outer 15
 
 # Background wallpaper
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/7pw4df3ozj481.png
+exec_always --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
 
 # Picom
 exec_always --no-startup-id picom -b
