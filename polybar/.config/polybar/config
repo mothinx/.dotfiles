@@ -37,7 +37,7 @@ padding-right = 0
 module-margin-right = 0
 module-margin-left = 0
 
-modules-right = network separator volume separator date
+modules-right = network separator volume separator polypomo separator date
 #modules-center = mpd
 modules-left = i3
 
@@ -243,3 +243,19 @@ animation-packetloss-framerate = 500
 type = custom/text
 content = |
 content-foreground = #4e4e4e
+
+[module/polypomo]
+type = custom/script
+
+exec = ~/.config/polybar/polypomo/polypomo
+tail = true
+
+label = %output%
+click-left = ~/.config/polybar/polypomo/polypomo toggle
+click-right = ~/.config/polybar/polypomo/polypomo end
+click-middle = ~/.config/polybar/polypomo/polypomo lock
+scroll-up = ~/.config/polybar/polypomo/polypomo time +60
+scroll-down = ~/.config/polybar/polypomo/polypomo time -60
+
+font-0 = fixed:pixelsize=10;1
+font-1 = Noto Emoji:scale=15:antialias=false;0
