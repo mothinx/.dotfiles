@@ -6,6 +6,7 @@ base
 bison
 bluez
 bluez-utils
+calibre
 code
 dialog
 docker
@@ -37,6 +38,7 @@ nautilus
 neofetch
 network-manager-applet
 networkmanager
+noto-fonts-emoji
 nvidia
 nvidia-settings
 obsidian
