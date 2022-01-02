@@ -10,11 +10,9 @@ red = #c795ae
 blue = #95aec7
 yellow = #c7ae95
 green = #aec795
-#background = #1f222d
-background = #262626
+background = #282828
 background-alt = #4e4e4e
-#foreground = #dfdfdf
-foreground = ${xrdb:foreground}
+foreground = #ebdbb2
 foreground-alt = #4e4e4e
 primary = #1f222d
 secondary = #FF6200
@@ -22,7 +20,6 @@ alert = #fb4934
 
 [bar/bar]
 bottom = true
-#wm-restack = bspwm
 height = 26
 offset-x = 11
 offset-y = 11
@@ -37,9 +34,9 @@ padding-right = 0
 module-margin-right = 0
 module-margin-left = 0
 
-modules-right = network separator volume separator polypomo separator date
-#modules-center = mpd
 modules-left = i3
+modules-center = polypomo
+modules-right = pulseaudio separator network separator date
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -48,7 +45,7 @@ underline-size = 0
 underline-color = ${colors.white}
 
 tray-detached = false
-tray-position = 
+tray-position = none 
 tray-offset-x = 0
 tray-offset-y = 0
 ;tray-maxsize = 16
@@ -57,10 +54,7 @@ tray-transparent = false
 tray-scale = 1.0
 
 font-0 = "monospace:size=8;2"
-font-1 = "FontAwesome:size=8;2"
-
-
-
+font-1 = "Material Icons Outlined:size=13;3:antialias=false"
 
 [module/i3]
 type = internal/i3
@@ -71,7 +65,7 @@ type = internal/i3
 ; on different bars
 ;
 ; Default: false
-pin-workspaces = true
+pin-workspaces = false
 
 ; This will split the workspace name on ':'
 ; Default: false
@@ -105,13 +99,83 @@ reverse-scroll = false
 ; Default: false
 fuzzy-match = true
 
+label-focused = %index%
+label-focused-padding = 2
+label-focused-background = #3c3836
+
+label-unfocused = %index%
+label-unfocused-padding = 2
+
+[module/network]
+type = internal/network
+; Name of the network interface to display. You can get the names of the
+; interfaces on your machine with `ip link`
+; Wireless interfaces often start with `wl` and ethernet interface with `eno` or `eth`
+interface = enp5s0
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 3.0
+
+; Test connectivity every Nth update
+; A value of 0 disables the feature
+; NOTE: Experimental (needs more testing)
+; Default: 0
+;ping-interval = 3
+
+; @deprecated: Define min width using token specifiers (%downspeed:min% and %upspeed:min%)
+; Minimum output width of upload/download rate
+; Default: 3
+#udspeed-minwidth = 5
+
+; Accumulate values from all interfaces
+; when querying for up/downspeed rate
+; Default: false
+accumulate-stats = true
+
+; Consider an `UNKNOWN` interface state as up.
+; Some devices like USB network adapters have 
+; an unknown state, even when they're running
+; Default: false
+unknown-as-up = true
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+format-connected-padding = 2
+format-disconnected-padding = 2
+
+label-connected =  %local_ip%
+label-disconnected =  Not connected
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume-margin = 1
+;format-volume-padding = 2
+format-volume = <ramp-volume><label-volume>
+label-volume = %percentage:4:4%%
+label-volume-background = ${colors.background}
+use-ui-max = false
+interval = 5
+
+click-right = exec pavucontrol &
+
+ramp-volume-0 = ""
+ramp-volume-1 = ""
+ramp-volume-2 = ""
+
+label-muted = muted
+label-muted-foreground = ${colors.foreground}
+
+
 [module/date]
 type = internal/date
 #date-alt =   %A %H:%M
 date =  %d/%m/%Y
 time = %H:%M
 format = <label>
-label = %date% %time%
+label = "  %date% %time%"
 #date = %{F#928374}%{F-} %H:%M
 interval = 5
 format-underline = ${colors.white}
@@ -120,6 +184,7 @@ format-foreground = ${colors.foreground}
 format-padding = 2
 
 label-separator = |
+
 
 [module/volume]
 type = internal/volume
@@ -140,105 +205,6 @@ format-muted-padding = 2
 
 format-padding = 2
 
-[module/keyboard]
-type = internal/xkeyboard
-
-; Available tags:
-;   <label-layout> (default)
-;   <label-indicator> (default)
-format = %{A1:~/.bin/toggkbl:}%{F#928374} %{F-}<label-layout> <label-indicator>%{A}
-format-spacing = 0
-format-underline = ${colors.white}
-
-; Available tokens:
-;   %layout%
-;   %name%
-;   %number%
-; Default: %layout%
-label-layout = %layout%
-format-padding = 2
-
-; Available tokens:
-;   %name%
-; Default: %name%
-label-indicator = %name%
-label-indicator-padding = 0
-
-[module/network]
-type = internal/network
-interface = wlp3s0
-
-; Seconds to sleep between updates
-; Default: 1
-interval = 3.0
-
-; Test connectivity every Nth update
-; A value of 0 disables the feature
-; NOTE: Experimental (needs more testing)
-; Default: 0
-;ping-interval = 3
-
-; @deprecated: Define min width using token specifiers (%downspeed:min% and %upspeed:min%)
-; Minimum output width of upload/download rate
-; Default: 3
-
-; Accumulate values from all interfaces
-; when querying for up/downspeed rate
-; Default: false
-accumulate-stats = true
-
-format-connected-padding = 2
-format-disconnected-padding = 2
-format-connected-underline = ${colors.white}
-format-disconnected-underline = ${colors.white}
-
-; Available tags:
-;   <label-connected> (default)
-;   <ramp-signal>
-format-connected = %{F#928374} %{F-}<label-connected> 
-
-; Available tags:
-;   <label-disconnected> (default)
-format-disconnected = <label-disconnected>
-
-; Available tags:
-;   <label-connected> (default)
-;   <label-packetloss>
-;   <animation-packetloss>
-format-packetloss = <animation-packetloss> <label-connected>
-
-; Available tokens:
-;   %ifname%    [wireless+wired]
-;   %local_ip%  [wireless+wired]
-;   %essid%     [wireless]
-;   %signal%    [wireless]
-;   %upspeed%   [wireless+wired]
-;   %downspeed% [wireless+wired]
-;   %linkspeed% [wired]
-; Default: %ifname% %local_ip%
-label-connected = %signal:3%%
-
-; Available tokens:
-;   %ifname%    [wireless+wired]
-; Default: (none)
-label-disconnected = %{F#928374} %{F-}none
-
-; Available tokens:
-;   %ifname%    [wireless+wired]
-;   %local_ip%  [wireless+wired]
-;   %essid%     [wireless]
-;   %signal%    [wireless]
-;   %linkspeed% [wired]
-; Default: (none)
-;label-packetloss = %essid%
-;label-packetloss-foreground = #eefafafa
-
-; Only applies if <animation-packetloss> is used
-animation-packetloss-0 = ⚠
-animation-packetloss-1 = 📶
-; Framerate in milliseconds
-animation-packetloss-framerate = 500
-
 [module/separator]
 type = custom/text
 content = |
@@ -256,6 +222,3 @@ click-right = ~/.config/polybar/polypomo/polypomo end
 click-middle = ~/.config/polybar/polypomo/polypomo lock
 scroll-up = ~/.config/polybar/polypomo/polypomo time +60
 scroll-down = ~/.config/polybar/polypomo/polypomo time -60
-
-font-0 = fixed:pixelsize=10;1
-font-1 = Noto Emoji:scale=15:antialias=false;0

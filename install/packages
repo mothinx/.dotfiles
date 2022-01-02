@@ -19,6 +19,7 @@ gcc
 git
 groff
 grub
+gucharmap
 i3-gaps
 i3status
 keepassxc
@@ -42,6 +43,7 @@ noto-fonts-emoji
 nvidia
 nvidia-settings
 obsidian
+otf-material-icons-git
 patch
 pavucontrol
 picom
@@ -57,6 +59,7 @@ terminus-font
 texinfo
 todoist
 tree
+ttf-material-icons-git
 vim
 which
 wpa_supplicant
