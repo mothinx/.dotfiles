@@ -31,12 +31,12 @@ enable-ipc = true
 padding-left = 0
 padding-right = 0
 
-module-margin-right = 0
+module-margin-right = 1
 module-margin-left = 0
 
 modules-left = i3
 modules-center = polypomo
-modules-right = pulseaudio separator network separator date
+modules-right = pulseaudio separator fs separator cpu separator memory separator network separator date
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -100,11 +100,42 @@ reverse-scroll = false
 fuzzy-match = true
 
 label-focused = %index%
-label-focused-padding = 2
 label-focused-background = #3c3836
 
 label-unfocused = %index%
+
+label-focused-padding = 2
 label-unfocused-padding = 2
+[module/fs]
+type = internal/fs
+
+mount-0 = /
+mount-1 = /home
+
+interval = 10
+
+format-mounted =  <label-mounted>
+
+label-mounted =  %mountpoint%: %percentage_used%%
+
+
+[module/cpu]
+type = internal/cpu
+
+interval = 5
+
+format = <label>
+
+label =  %percentage%%
+
+[module/memory]
+type = internal/memory
+
+interval = 5
+
+format = <label>
+
+label =  %gb_used%
 
 [module/network]
 type = internal/network
@@ -142,9 +173,6 @@ unknown-as-up = true
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 
-format-connected-padding = 2
-format-disconnected-padding = 2
-
 label-connected =  %local_ip%
 label-disconnected =  Not connected
 
@@ -181,7 +209,6 @@ interval = 5
 format-underline = ${colors.white}
 ;format-background = ${colors.black}
 format-foreground = ${colors.foreground}
-format-padding = 2
 
 label-separator = |
 
@@ -190,7 +217,6 @@ label-separator = |
 type = internal/volume
 
 format-volume = <label-volume> 
-format-volume-padding = 2
 
 format-volume-underline = ${colors.white}
 
@@ -200,10 +226,8 @@ label-volume = %{F#928374} %{F-}%percentage:3%%
 label-muted =%{F#928374} %{F-}mute
 format-muted = <label-muted>
 format-muted-underline = ${colors.white}
-format-muted-padding = 2
 #label-muted-foreground = ${colors.gray}
 
-format-padding = 2
 
 [module/separator]
 type = custom/text
