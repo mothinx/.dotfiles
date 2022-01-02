@@ -15,7 +15,7 @@ Arch
     #cd .dotfiles
     #stow git
     #stow kitty
-    #stow polybar
+    #stow i3
     etc...
     
 ```
