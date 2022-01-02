@@ -14,8 +14,8 @@ Arch
 ``` 
     #cd .dotfiles
     #stow git
-    #stow zsh
-    #stow i3
+    #stow kitty
+    #stow polybar
     etc...
     
 ```
