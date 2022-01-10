@@ -7,8 +7,10 @@ bison
 bluez
 bluez-utils
 calibre
+chromium
 code
 dialog
+discord
 docker
 efibootmgr
 fakeroot
@@ -21,6 +23,7 @@ git
 groff
 grub
 gucharmap
+guitarix
 i3-gaps
 i3status
 keepassxc
@@ -38,6 +41,7 @@ man-db
 man-pages
 nautilus
 neofetch
+neovim
 network-manager-applet
 networkmanager
 noto-fonts-emoji
@@ -51,6 +55,8 @@ picom
 pkgconf
 polybar
 pulseaudio
+python-pip
+qjackctl
 ranger
 rofi
 rust-analyzer
