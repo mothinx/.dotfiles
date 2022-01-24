@@ -58,6 +58,7 @@ pulseaudio
 python-pip
 qjackctl
 ranger
+redshift
 rofi
 rust-analyzer
 stow
