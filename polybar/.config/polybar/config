@@ -10,9 +10,9 @@ red = #c795ae
 blue = #95aec7
 yellow = #c7ae95
 green = #aec795
-background = #282828
+background = #282a36
 background-alt = #4e4e4e
-foreground = #ebdbb2
+foreground = #f8f8f2
 foreground-alt = #4e4e4e
 primary = #1f222d
 secondary = #FF6200
@@ -100,7 +100,7 @@ reverse-scroll = false
 fuzzy-match = true
 
 label-focused = %index%
-label-focused-background = #3c3836
+label-focused-background = #44475a
 
 label-unfocused = %index%
 
