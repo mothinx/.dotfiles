@@ -20,6 +20,7 @@ flameshot
 flex
 gcc
 git
+google-chrome
 groff
 grub
 gucharmap
@@ -44,6 +45,7 @@ neofetch
 neovim
 network-manager-applet
 networkmanager
+nmap
 noto-fonts-emoji
 nvidia
 nvidia-settings
@@ -51,6 +53,7 @@ obsidian
 otf-material-icons-git
 patch
 pavucontrol
+peek
 picom
 pkgconf
 polybar
@@ -60,7 +63,9 @@ qjackctl
 ranger
 redshift
 rofi
+rpi-imager
 rust-analyzer
+spotify
 stow
 sudo
 terminus-font
@@ -75,4 +80,5 @@ xdg-user-dirs
 xdg-utils
 xorg-xev
 xorg-xrandr
+zettelkasten
 zsh
