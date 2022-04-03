@@ -54,7 +54,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Return exec --no-startup-id rofi -show run
 
 # Start browser
-bindsym $mod+b exec --no-startup-id firefox
+bindsym $mod+b exec --no-startup-id google-chrome-stable
 
 # Take screenshots
 bindsym $mod+Shift+slash exec --no-startup-id flameshot gui
