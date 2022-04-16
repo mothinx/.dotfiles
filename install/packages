@@ -12,6 +12,7 @@ code
 dialog
 discord
 docker
+docker-compose
 efibootmgr
 fakeroot
 feh
@@ -27,8 +28,10 @@ gucharmap
 guitarix
 i3-gaps
 i3status
+intellij-idea-community-edition
 keepassxc
 kitty
+libreoffice-fresh
 libtool
 lightdm
 lightdm-gtk-greeter
@@ -40,6 +43,7 @@ m4
 make
 man-db
 man-pages
+maven
 nautilus
 neofetch
 neovim
@@ -50,6 +54,7 @@ noto-fonts-emoji
 nvidia
 nvidia-settings
 obsidian
+okular
 otf-material-icons-git
 patch
 pavucontrol
