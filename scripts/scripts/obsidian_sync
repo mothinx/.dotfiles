@@ -4,6 +4,9 @@ OBSIDIAN_PATH="/home/mothinx/Thot"
 
 cd "$OBSIDIAN_PATH"
 
+# BySinc with Google Drive
+rclone bisync /home/mothinx/Thot remote:thot --exclude .git/ --verbose
+
 CHANGES_EXIST="$(git status --porcelain | wc -l)"
 
 if [ "$CHANGES_EXIST" -eq 0 ]; then
@@ -14,3 +17,4 @@ git pull
 git add .
 git commit -q -m "Last sync: $(date +"%Y-%m-%d %H:%M:%S")"
 git push -q
+
