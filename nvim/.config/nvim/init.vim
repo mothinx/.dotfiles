@@ -15,9 +15,7 @@ set signcolumn=yes
 
 lua require('plugins')
 
-let mapleader=","
-nnoremap <Leader>ff <cmd>Telescope find_files<cr>
-nnoremap <Leader>fh <cmd>Telescope find_files hidden=true<cr>
+let mapleader=" "
 
 " Run :PackerCompile when plugins.lua is updated
 augroup packer_user_config
