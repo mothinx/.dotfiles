@@ -1,0 +1,6 @@
+# Unix
+alias v='nvim'
+
+# Maven
+alias mci='mvn clean install'
+alias mqd='mvn quarkus:dev'
