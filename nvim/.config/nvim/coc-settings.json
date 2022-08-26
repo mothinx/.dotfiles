@@ -1,4 +1,0 @@
-{
-    "rust-analyzer.enable": true,
-    "rust-analyzer.checkOnSave.enable": true
-}

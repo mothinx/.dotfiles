@@ -13,15 +13,14 @@ set scrolloff=8
 set colorcolumn=80
 set signcolumn=yes
 
-call plug#begin('~/.vim/plugged')
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'Mofiqul/dracula.nvim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-call plug#end()
-
-colorscheme dracula
+lua require('plugins')
 
 let mapleader=","
 nnoremap <Leader>ff <cmd>Telescope find_files<cr>
 nnoremap <Leader>fh <cmd>Telescope find_files hidden=true<cr>
+
+" Run :PackerCompile when plugins.lua is updated
+augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+augroup end

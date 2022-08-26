@@ -10,6 +10,7 @@ bluez-utils
 calibre
 chromium
 code
+cronie
 dconf-editor
 devhelp
 dialog
@@ -31,6 +32,7 @@ ghex
 git
 glade
 gnome-builder
+gnome-calculator
 gnome-chess
 gnome-connections
 gnome-games
@@ -59,6 +61,7 @@ i3status
 iagno
 intellij-idea-community-edition
 jdk17-openjdk
+jdtls
 keepassxc
 kitty
 libreoffice-fresh
@@ -75,6 +78,7 @@ make
 man-db
 man-pages
 maven
+nautilus
 neofetch
 neovim
 network-manager-applet
@@ -83,8 +87,10 @@ nmap
 noto-fonts-emoji
 nvidia
 nvidia-settings
+nvim-packer-git
 obsidian
 okular
+onboard
 otf-material-icons-git
 pacman-contrib
 patch
@@ -104,6 +110,7 @@ rofi
 rpi-imager
 rust-analyzer
 spotify
+steam
 stow
 sudo
 swell-foop
@@ -111,6 +118,7 @@ sysprof
 tali
 terminus-font
 texinfo
+tmux
 todoist
 tree
 ttf-material-icons-git
