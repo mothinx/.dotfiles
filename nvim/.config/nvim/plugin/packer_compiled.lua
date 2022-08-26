@@ -69,11 +69,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["nvim-jdtls"] = {
-    loaded = true,
-    path = "/home/mothinx/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
-    url = "https://github.com/mfussenegger/nvim-jdtls"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/mothinx/.local/share/nvim/site/pack/packer/start/packer.nvim",
