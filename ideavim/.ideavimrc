@@ -5,6 +5,14 @@ set incsearch
 set ignorecase
 set number
 set relativenumber
+set showmode
+set visualbell
 
 "" Idea specific settings ---------
-set ideajoin 
+set ideajoin
+
+"" Mapping
+nmap <leader>g <action>(Generate)
+
+"" Plugins
+set NERDTree
