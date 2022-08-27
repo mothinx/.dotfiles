@@ -22,5 +22,10 @@ Arch
 
 ### Keyboard layout
 ```
+# Us international altgr with no dead keys layout
 setxkbmap -layout us -variant altgr-intl -option nodeadkeys
+# Activate Fn keys with F1,F2,F3...
+sudo echo 2 > /sys/module/hid_apple/parameters/fnmode
+# Remap CAPSLOCK to Escape
+setxkbmap -option caps:escape
 ```
