@@ -176,9 +176,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # i3-gaps
-for_window [class=".*"] border pixel 2
-gaps inner 0
-gaps outer 0
+for_window [class=".*"] border none 
+gaps inner 8
+gaps outer 8
 
 # Background wallpaper
 exec_always --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
@@ -188,8 +188,3 @@ exec_always --no-startup-id picom -b
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-# Colors
-# I just use child_border
-# border / bground / text / indicator / child_border
-client.focused #900000 #900000 #900000 #bd93f9 #6272a4
