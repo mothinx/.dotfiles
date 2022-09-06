@@ -23,3 +23,7 @@ function expand-alias() {
 }
 zle -N expand-alias
 bindkey -M main ' ' expand-alias
+
+# Add JBang to environment
+alias j!=jbang
+export PATH="$HOME/.jbang/bin:$PATH"
