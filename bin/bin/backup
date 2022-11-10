@@ -9,7 +9,7 @@ if [ ! -d $backup_path ]; then
     exit -1
 fi
 
-today_dir=$(date +'%m%d%Y')
+today_dir=$(date +'%Y%m%d')
 
 if [ ! -d $backup_path/$today_dir ]; then
     echo "Creating directory: $backup_path/$today_dir"
