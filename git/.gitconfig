@@ -7,3 +7,5 @@
 
 [commit]
 	template = /home/mothinx/.gitmessage
+[init]
+	defaultBranch = main
