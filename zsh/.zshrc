@@ -27,3 +27,9 @@ bindkey -M main ' ' expand-alias
 # Add JBang to environment
 alias j!=jbang
 export PATH="$HOME/.jbang/bin:$PATH"
+
+# fnm
+export PATH="/home/mothinx/.local/share/fnm:$PATH"
+eval "`fnm env`"
+
+export DOTFILES_PATH="$HOME/.dotfiles"
