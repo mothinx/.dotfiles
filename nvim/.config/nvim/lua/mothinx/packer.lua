@@ -9,4 +9,6 @@ return require('packer').startup(function(use)
   use 'catppuccin/nvim'
   -- Configurations for Nvim LSP
   use 'neovim/nvim-lspconfig'
+  -- Game to improve at vim
+  use 'ThePrimeagen/vim-be-good'
 end)
