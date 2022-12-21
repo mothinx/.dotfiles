@@ -34,4 +34,14 @@ make
 ```
 
 ## Uninstall
+
 `make delete`
+
+## Misc
+
+Chrome/Firefox plugins i use:
+
+- **Grepper**: Give code examples directly in your google search
+- **Bitwarden**: Password management
+- **Todoist**: Todoist widget
+- **React Developper Tool**: React dev utils
