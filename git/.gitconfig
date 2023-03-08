@@ -3,7 +3,7 @@
     email = gracia.julien@gmail.com
     username = mothinx
 [core]
-    editor = vim
+    editor = nvim
 
 [commit]
 	template = /home/mothinx/.gitmessage
