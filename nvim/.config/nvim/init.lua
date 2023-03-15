@@ -74,7 +74,7 @@ require('lazy').setup({
     },
   },
 
-  { -- Theme 
+  { -- Theme
     'catppuccin/vim',
     priority = 1000,
     config = function()
@@ -155,7 +155,10 @@ require('lazy').setup({
 -- See `:help vim.o`
 
 -- Set highlight on search
-vim.o.hlsearch = false
+vim.o.hlsearch = true
+
+-- Relative numbers
+vim.o.relativenumber = true
 
 -- Make line numbers default
 vim.wo.number = true
@@ -457,4 +460,3 @@ cmp.setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-
