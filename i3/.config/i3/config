@@ -192,3 +192,6 @@ exec_always --no-startup-id picom -b
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+# Remap Caps to Escape
+exec_always --no-startup-id xmodmap -e "clear lock"
+exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = Escape"
