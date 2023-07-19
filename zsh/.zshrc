@@ -33,3 +33,11 @@ export PATH="/home/mothinx/.local/share/fnm:$PATH"
 eval "`fnm env`"
 
 export DOTFILES_PATH="$HOME/.dotfiles"
+
+# pnpm
+export PNPM_HOME="/home/mothinx/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
