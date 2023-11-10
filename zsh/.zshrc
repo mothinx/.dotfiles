@@ -6,7 +6,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH="/home/mothinx/bin:$PATH"
+export PATH=$PATH:"/home/mothinx/bin"
 
 if [ -f ~/.aliases ]; then
     source $HOME/.aliases
@@ -24,13 +24,6 @@ function expand-alias() {
 zle -N expand-alias
 bindkey -M main ' ' expand-alias
 
-# Add JBang to environment
-alias j!=jbang
-export PATH="$HOME/.jbang/bin:$PATH"
-
-# fnm
-export PATH="/home/mothinx/.local/share/fnm:$PATH"
-eval "`fnm env`"
 
 export DOTFILES_PATH="$HOME/.dotfiles"
 
