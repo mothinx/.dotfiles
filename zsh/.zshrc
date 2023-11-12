@@ -6,7 +6,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=$PATH:"/home/mothinx/bin"
 
 if [ -f ~/.aliases ]; then
     source $HOME/.aliases
@@ -34,3 +33,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+#
+export PATH="/home/mothinx/bin":$PATH
