@@ -4,7 +4,7 @@
 ## Open some stuff for my morning review 
 
 # Calendar 
-google-chrome-stable https://calendar.proton.me/
+google-chrome-stable --new-window https://calendar.proton.me/
 
 sleep 3
 
