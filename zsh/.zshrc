@@ -35,3 +35,5 @@ esac
 # pnpm end
 #
 export PATH="/home/mothinx/bin":$PATH
+
+setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
