@@ -192,6 +192,4 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id xmodmap -e "clear lock"
 exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = Escape"
 
-exec --no-startup-id keepassxc
 exec --no-startup-id syncthing
-exec --no-startup-id spotify
