@@ -1,47 +1,46 @@
-# .dotfiles
+# Dotfiles: Personalize Your System with Ease
 
-> Dotfiles is all about lazyness
+## Introduction
 
-## What is it ?
+Welcome to Dotfiles - your gateway to effortless system personalization! Dotfiles are a collection of configuration files tailored to enhance your computing experience. If you find yourself spending more than 10 minutes in front of a terminal daily, then dotfiles are your ticket to a more efficient and enjoyable workflow.
 
-Dotfiles are configuration files to personalize your system.
+## What's Inside?
 
-You should use dotfiles if stay more than 10 minutes in front of a computer every day.
+Every aspect of this repository is meticulously organized using Stow, a powerful Linux tool for symbolic linking. Each directory represents a distinct "topic" to keep things tidy and manageable.
 
-## Components
+- **bin/**: Add custom scripts and executables to your `$PATH`.
+- **git/**: Configure Git to suit your workflow.
+- **i3/**: Dive into the world of i3 window manager for a streamlined desktop experience.
+- **ideavim/**: Elevate your Intellij IDEA with Vim keybindings using this plugin.
+- **kitty/**: Embrace Kitty, the terminal emulator, for a purr-fectly efficient command line.
+- **nvim/**: Transform Neovim into your go-to Integrated Development Environment (IDE).
+- **polybar/**: Customize your i3 desktop with the sleek Polybar.
+- **redshift/**: Protect your precious eyes with Redshift, a tool for adjusting screen color temperature.
+- **rofi/**: Enhance your window management with Rofi, the versatile window switcher.
+- **zsh/**: Level up your shell game with Zsh, a powerful alternative to bash.
 
-Everything here is build with [stow](https://www.gnu.org/software/stow/), a linux tool to symlink stuff. So every directories is "topic" related.
+## Installation
 
-- **bin/**: Anything in it will get added to the `$PATH`.
-- **git/**: Git config.
-- **i3/**: Use I3 as a window manager.
-- **ideavim/**: Vim plugin for IDEA Intellij.
-- **kitty/**: Kitty is a terminal emulator.
-- **nvim/**: Because i want to use it as my everyday IDE.
-- **polybar/**: Bar for i3.
-- **redshift/**: A tool to protect your eyes.
-- **rofi/**: A window switcher.
-- **zsh/**: A shell.
+Ready to embark on the journey of system personalization? Follow these simple steps:
 
-## Install
-
-Run:
-
-```sh
-git clone https://github.com/mothinx/.dotfiles.git ~/.dotfiles`
+```bash
+git clone https://github.com/mothinx/.dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 make
 ```
 
-## Uninstall
+### Uninstallation
 
-`make delete`
+Should you ever wish to bid adieu to your dotfiles setup, fear not! Use the following command to bid them farewell:
 
-## Misc
+```bash
+make delete
+```
 
-Chrome/Firefox plugins i use:
+### Miscellaneous
+Here are some additional tools and plugins that I personally use to augment my browsing and development experience:
 
-- **Grepper**: Give code examples directly in your google search
-- **Bitwarden**: Password management
-- **Todoist**: Todoist widget
-- **React Developper Tool**: React dev utils
+- **Grepper**: Retrieve code examples directly from your Google search results.
+- **React Developer Tool**: Streamline your React development with this essential browser extension.
+
+Feel free to explore, customize, and make these dotfiles your own. Happy computing! 🚀
