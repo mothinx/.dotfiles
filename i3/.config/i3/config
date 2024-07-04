@@ -58,6 +58,9 @@ bindsym $mod+b exec --no-startup-id google-chrome-stable
 # Take screenshots
 bindsym $mod+Shift+slash exec --no-startup-id flameshot gui
 
+# Remap CAPSLOCK to ESC
+exec --no-startup-id xmodmap ~/.Xmodmap
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
