@@ -58,8 +58,6 @@ bindsym $mod+b exec --no-startup-id google-chrome-stable
 # Take screenshots
 bindsym $mod+Shift+slash exec --no-startup-id flameshot gui
 
-# Remap CAPSLOCK to ESC
-exec --no-startup-id xmodmap ~/.Xmodmap
 
 # change focus
 bindsym $mod+h focus left
@@ -177,10 +175,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# i3-gaps
 for_window [class=".*"] border none 
-#gaps inner 8
-#gaps outer 8
 
 # Background wallpaper
 exec_always --no-startup-id feh --bg-scale --randomize ~/Pictures/wallpapers/*
@@ -190,9 +185,5 @@ exec_always --no-startup-id picom -b
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-# Remap Caps to Escape
-exec_always --no-startup-id xmodmap -e "clear lock"
-exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = Escape"
 
 exec --no-startup-id syncthing
