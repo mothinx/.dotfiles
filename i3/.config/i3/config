@@ -58,6 +58,8 @@ bindsym $mod+b exec --no-startup-id google-chrome-stable
 # Take screenshots
 bindsym $mod+Shift+slash exec --no-startup-id flameshot gui
 
+# Emoji
+bindsym $mod+Shift+period exec --no-startup-id rofi -modi emoji -show emoji 
 
 # change focus
 bindsym $mod+h focus left
