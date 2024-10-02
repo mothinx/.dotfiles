@@ -42,3 +42,4 @@ setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 source /usr/share/nvm/init-nvm.sh
+export PATH="$PATH:/opt/nvim-linux64/bin"
