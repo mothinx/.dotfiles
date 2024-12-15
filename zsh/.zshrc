@@ -36,10 +36,8 @@ esac
 #
 export PATH="/home/mothinx/bin":$PATH
 
-setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-source /usr/share/nvm/init-nvm.sh
 export PATH="$PATH:/opt/nvim-linux64/bin"
