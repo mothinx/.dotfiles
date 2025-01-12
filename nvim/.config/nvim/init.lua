@@ -12,6 +12,7 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	require("plugins.mini"),
 	require("plugins.telescope"),
 	require("plugins.which-key"),
 	require("plugins.neotree"),
@@ -23,4 +24,5 @@ require("lazy").setup({
 	require("plugins.todo-comments"),
 	require("plugins.treesitter"),
 	require("plugins.autopairs"),
+	require("plugins.lazygit"),
 })
