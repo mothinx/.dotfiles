@@ -83,7 +83,7 @@ input * {
     bindsym $mod+Return exec $menu
 
     # Start a browser
-    bindsym $mod+b exec google-chrome 
+    bindsym $mod+b exec firefox
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
