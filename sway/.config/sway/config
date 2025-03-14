@@ -214,8 +214,8 @@ bindsym $mod+r mode "resize"
 #
     # Special keys to adjust volume via PulseAudio
     bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
-    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
-    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
+    bindsym --locked $mod+minus exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
+    bindsym --locked $mod+plus exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
     bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
     # Special keys to adjust brightness via brightnessctl
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
@@ -223,30 +223,7 @@ bindsym $mod+r mode "resize"
     # Special key to take a screenshot with grim
     bindsym Print exec grim
 
-#
-# Status Bar:
-#
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    position bottom
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command ~/.local/bin/status.sh 
-
-    colors {
-    background         $base
-    statusline         $text
-    focused_statusline $text
-    focused_separator  $base
-
-    # target           border bg        text
-    focused_workspace  $base  $mauve    $crust
-    active_workspace   $base  $surface2 $text
-    inactive_workspace $base  $base     $text
-    urgent_workspace   $base  $red      $crust
-    }
-}
 # target                 title     bg    text   indicator  border
 client.focused           $lavender $base $text  $rosewater $lavender
 client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
@@ -269,3 +246,4 @@ input "type:keyboard" {
 default_border pixel 
 
 include /etc/sway/config.d/*
+exec waybar
