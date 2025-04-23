@@ -1,4 +1,4 @@
-export ZSH="/home/mothinx/.oh-my-zsh"
+export ZSH="/home/julien/.oh-my-zsh"
 
 ZSH_THEME="kolo"
 
