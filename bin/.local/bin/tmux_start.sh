@@ -32,20 +32,14 @@ create_session_with_windows() {
 
 dotfiles_paths=(
   "$HOME/.dotfiles"
-  "$HOME/.dotfiles"
-  "$HOME"
 )
 
 dotfiles_cmds=(
   "nvim ."
-  "lazygit"
-  ""
 )
 
 dotfiles_names=(
   "nvim"
-  "git"
-  "home"
 )
 
 create_session_with_windows "dotfiles" dotfiles_paths dotfiles_cmds dotfiles_names
@@ -55,6 +49,12 @@ home_cmds=("")
 home_names=("")
 
 create_session_with_windows "home" home_paths home_cmds home_names
+
+notes_paths=("$HOME/thot")
+notes_cmds=("nvim .")
+notes_names=("thot")
+
+create_session_with_windows "notes" notes_paths notes_cmds notes_names
 
 # Attache à la session home
 tmux attach -t home
