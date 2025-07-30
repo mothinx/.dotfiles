@@ -4,3 +4,8 @@ alias v='nvim'
 # Maven
 alias mci='mvn clean install'
 alias mqd='mvn quarkus:dev'
+
+# Neovim
+alias vim-lazy='nvim'
+alias vim-perso='NVIM_APPNAME="nvim-perso" nvim'
+
