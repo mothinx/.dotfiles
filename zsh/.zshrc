@@ -44,3 +44,5 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 
 export PATH=$PATH:/home/julien/go/bin
 
+export PATH="/home/julien/.cargo/bin:$PATH"
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
