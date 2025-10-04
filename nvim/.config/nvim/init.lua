@@ -9,6 +9,7 @@ vim.opt.swapfile = false
 vim.opt.undofile = true
 vim.opt.incsearch = true
 vim.opt.termguicolors = true
+vim.opt.scrolloff = 10 
 vim.o.winborder = "rounded"
 
 vim.g.mapleader = " "
@@ -41,6 +42,7 @@ vim.cmd("set completeopt+=noselect")
 require "mini.pick".setup()
 require "oil".setup()
 require "mason".setup()
+
 require "nvim-treesitter.configs".setup({
 	ensure_installed = { "lua", "vim", "vimdoc", "markdown" },
 	highlight = { enable = true },
@@ -61,7 +63,7 @@ vim.keymap.set('n', '<leader>h', ':Pick help<CR>')
 vim.keymap.set('n', '<leader>e', ':Oil<CR>')
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 
-vim.lsp.enable({ "lua_ls", "pyright" })
+vim.lsp.enable({ "lua_ls", "pyright", "yamlls" })
 vim.lsp.config("lua_ls", {
 	settings = {
 		Lua = {
