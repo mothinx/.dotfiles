@@ -2,7 +2,7 @@ export ZSH="/home/julien/.oh-my-zsh"
 
 ZSH_THEME="kolo"
 
-plugins=(git)
+plugins=(git kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
