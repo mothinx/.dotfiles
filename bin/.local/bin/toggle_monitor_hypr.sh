@@ -2,7 +2,7 @@
 
 # Récupérer l'état de la sortie DP-2 via hyprctl
 # On cherche "DP-2" et si son état est "enabled"
-if hyprctl monitors | grep "Monitor DP-2" -A 16 | grep -q "disabled: false"; then
+if hyprctl monitors | grep "Monitor DP-2" -A 16 | grep -q "active workspace"; then
   echo "DP-2 est activé. Désactivation via hyprctl..."
   # Désactiver la sortie DP-2
   hyprctl keyword monitor DP-2, disable

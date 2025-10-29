@@ -1,12 +1,11 @@
-# Unix
-alias v='nvim'
-
-# Maven
-alias mci='mvn clean install'
-alias mqd='mvn quarkus:dev'
+alias ll='ls --all'
 
 # Neovim
 alias v='NVIM_APPNAME="nvim-perso" nvim'
 alias nv='NVIM_APPNAME="lazyvim" nvim'
 
+# Git
+alias gd='git diff'
+alias gst='git status'
+alias gp='git pull'
 
