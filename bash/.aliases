@@ -5,6 +5,7 @@ alias v='NVIM_APPNAME="nvim-perso" nvim'
 alias nv='NVIM_APPNAME="lazyvim" nvim'
 
 # Git
+alias ga='git add'
 alias gd='git diff'
 alias gst='git status'
 alias gp='git pull'
