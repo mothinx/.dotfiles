@@ -11,4 +11,5 @@ vim.o.number = true
 vim.o.relativenumber = true
 vim.o.cursorline = true
 vim.o.signcolumn = "yes"
+vim.o.swapfile = false
 vim.diagnostic.config({ virtual_text = true}) -- inline diagnostics
