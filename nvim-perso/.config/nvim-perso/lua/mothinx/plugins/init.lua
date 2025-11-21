@@ -7,6 +7,7 @@ vim.pack.add({
 	{src = "http://github.com/nvim-telescope/telescope.nvim"},
 	{src = "http://github.com/folke/which-key.nvim"},
 	{src = "http://github.com/nvim-mini/mini.nvim"},
+	{src = "http://github.com/nvim-tree/nvim-tree.lua"},
 	{src = "http://github.com/kdheepak/lazygit.nvim"},
 	{src = "https://github.com/nvim-treesitter/nvim-treesitter"},
   -- Themes loader with Omarchy
@@ -17,6 +18,7 @@ vim.pack.add({
 })
 
 require("mothinx.plugins.lsp")
+require("mothinx.plugins.tree")
 require("mothinx.plugins.telescope")
 require("mothinx.plugins.treesitter")
 require("mothinx.plugins.mini")
