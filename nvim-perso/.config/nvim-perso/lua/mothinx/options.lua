@@ -13,3 +13,10 @@ vim.o.cursorline = true
 vim.o.signcolumn = "yes"
 vim.o.swapfile = false
 vim.diagnostic.config({ virtual_text = true}) -- inline diagnostics
+vim.g.have_nerd_font = true -- Nerd font
+vim.o.mouse = 'a' -- Usefull for resizing splits
+vim.schedule(function()        -- Share the os and neovim clipboard
+vim.o.clipboard = 'unnamedplus'
+end)
+vim.o.showmode = false -- it's already in the statusline
+
