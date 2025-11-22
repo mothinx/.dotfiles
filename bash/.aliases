@@ -8,5 +8,6 @@ alias nv='NVIM_APPNAME="lazyvim" nvim'
 alias ga='git add'
 alias gd='git diff'
 alias gst='git status'
-alias gp='git pull'
+alias gpl='git pull'
+alias gpu='git push'
 
