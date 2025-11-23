@@ -5,11 +5,40 @@ INSTALLS_DIR="$(dirname "$(realpath "$0")")/installs"
 DRY_RUN=false
 SCRIPT_ARGS=()
 
+show_help() {
+  echo "Usage: $(basename "$0") [options] [script_name...]"
+  echo
+  echo "Installs various tools and configurations from the 'installs' directory."
+  echo "If no script names are provided, it runs all available scripts."
+  echo
+  echo "Options:"
+  echo "  --dry-run          Simulate the installation process without executing any commands."
+  echo "  -h, --help         Display this help message and exit."
+  echo
+  echo "Available scripts:"
+  if [ -d "$INSTALLS_DIR" ]; then
+    mapfile -t scripts < <(find "$INSTALLS_DIR" -maxdepth 1 -type f -name "*.sh" -exec basename {} .sh \; | sort)
+    if [ ${#scripts[@]} -gt 0 ]; then
+      for script in "${scripts[@]}"; do
+        echo "  $script"
+      done
+    else
+      echo "  No scripts found in '$INSTALLS_DIR'."
+    fi
+  else
+    echo "  'installs' directory not found."
+  fi
+  exit 0
+}
+
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --dry-run)
       DRY_RUN=true
       shift
+      ;;
+    -h|--help)
+      show_help
       ;;
     *)
       SCRIPT_ARGS+=("$1")
