@@ -44,6 +44,14 @@
       "rev": "42fc28ba918343ebfd5565147a42a26580579482",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
+    "obsidian.nvim": {
+      "rev": "4065c233f618cdbfbf084d87e97317f8d019ef59",
+      "src": "https://github.com/obsidian-nvim/obsidian.nvim"
+    },
+    "oil.nvim": {
+      "rev": "01cb3a8ad7d5e8707041edc775af83dbf33838f4",
+      "src": "https://github.com/stevearc/oil.nvim"
+    },
     "omarchy-theme-loader.nvim": {
       "rev": "b4d1891cf50b4bb47f25f4eb3663ff28ddb451c8",
       "src": "http://github.com/EskelinenAntti/omarchy-theme-loader.nvim"

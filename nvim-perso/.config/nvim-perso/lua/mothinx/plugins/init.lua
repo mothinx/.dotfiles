@@ -10,6 +10,8 @@ vim.pack.add({
 	{src = "http://github.com/nvim-tree/nvim-tree.lua"},
 	{src = "http://github.com/kdheepak/lazygit.nvim"},
 	{src = "https://github.com/nvim-treesitter/nvim-treesitter"},
+	{src = "https://github.com/obsidian-nvim/obsidian.nvim"},
+	{src = "https://github.com/stevearc/oil.nvim"},
   -- Themes loader with Omarchy
 	{src = "http://github.com/catppuccin/nvim"},
 	{src = "http://github.com/ellisonleao/gruvbox.nvim"},
@@ -22,3 +24,4 @@ require("mothinx.plugins.tree")
 require("mothinx.plugins.telescope")
 require("mothinx.plugins.treesitter")
 require("mothinx.plugins.mini")
+require("mothinx.plugins.oil")
