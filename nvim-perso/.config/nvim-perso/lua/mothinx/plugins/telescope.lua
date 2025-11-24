@@ -10,3 +10,6 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 vim.keymap.set('n', '<leader>fd', function()
   builtin.find_files({hidden = true, cwd = '~/.dotfiles'})
 end, { desc = 'Telescope [f]ind [d]otfiles' })
+vim.keymap.set('n', '<leader>ft', function()
+  builtin.find_files({ cwd = '~/thot' })
+end, { desc = 'Telescope [f]ind [t]hot' })

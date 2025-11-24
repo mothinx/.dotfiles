@@ -25,3 +25,5 @@ require("mothinx.plugins.telescope")
 require("mothinx.plugins.treesitter")
 require("mothinx.plugins.mini")
 require("mothinx.plugins.oil")
+require("mothinx.plugins.obsidian")
+
