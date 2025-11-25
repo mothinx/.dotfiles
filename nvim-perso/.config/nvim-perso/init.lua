@@ -1,5 +1,6 @@
 -- Load options
 require("mothinx.options")
+require("mothinx.keymaps")
 
 -- Disable netrw
 vim.g.loaded_netrw = 1

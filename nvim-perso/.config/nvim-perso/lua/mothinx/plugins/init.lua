@@ -26,4 +26,5 @@ require("mothinx.plugins.treesitter")
 require("mothinx.plugins.mini")
 require("mothinx.plugins.oil")
 require("mothinx.plugins.obsidian")
+require("mothinx.plugins.whichkey")
 
