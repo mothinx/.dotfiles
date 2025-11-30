@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "blink.cmp": {
+      "rev": "f13226770b4947eb7e66befbeb53c3db39f13e25",
+      "src": "https://github.com/Saghen/blink.cmp"
+    },
     "everforest-nvim": {
       "rev": "557bce922401e247a596583679bc181d4d688554",
       "src": "http://github.com/neanias/everforest-nvim"
