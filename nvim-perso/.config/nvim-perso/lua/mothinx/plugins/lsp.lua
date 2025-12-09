@@ -1,7 +1,7 @@
 require("mason").setup()
 require("mason-lspconfig").setup()
 require("mason-tool-installer").setup({
-	ensure_installed = {"lua_ls", "ts_ls", "pyright", "jdtls"}
+	ensure_installed = {"lua_ls", "ts_ls", "pyright", "jdtls", "gopls"}
 })
 
 vim.lsp.config['lua_ls'] = {
