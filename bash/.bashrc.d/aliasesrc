@@ -1,8 +1,10 @@
 alias ll='ls --all'
 
+# Toolbox
+alias dev='toolbox enter dev' 
 # Neovim
-alias v='NVIM_APPNAME="nvim-perso" nvim'
-alias nv='NVIM_APPNAME="lazyvim" nvim'
+alias v='nvim'
+alias nv='nvim'
 
 # Git
 alias ga='git add'
