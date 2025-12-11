@@ -84,6 +84,9 @@ input * {
     # Start your launcher
     bindsym $mod+Return exec $menu
 
+    # Web browser
+    bindsym $mod+Shift+b exec "flatpak run com.google.Chrome"
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -208,7 +211,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 default_border pixel 1
-smart_gaps on
+smart_gaps off
 gaps inner 10
 
 hide_edge_borders smart
