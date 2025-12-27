@@ -25,7 +25,8 @@ fi
 unset rc
 
 if [ -f "/run/.containerenv" ]; then
-  echo "Starting starship in container..."
   eval "$(starship init bash)"
+  eval "$(~/.local/bin/mise activate bash)"
 fi
 
+export PATH="$HOME/.skim/bin:$PATH"
