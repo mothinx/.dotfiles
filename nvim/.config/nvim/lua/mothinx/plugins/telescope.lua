@@ -1,15 +1,13 @@
-local builtin = require('telescope.builtin')
-
-vim.keymap.set('n', '<leader>ff',  builtin.find_files, { desc = 'Telescope [f]ind [f]iles' })
-vim.keymap.set('n', '<leader>fa', function()
-    builtin.find_files({ hidden = true })
-end, { desc = 'Telescope find All files' })
-vim.keymap.set('n', '<leader>fg',builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
-vim.keymap.set('n', '<leader>fd', function()
-  builtin.find_files({hidden = true, cwd = '~/.dotfiles'})
-end, { desc = 'Telescope [f]ind [d]otfiles' })
-vim.keymap.set('n', '<leader>ft', function()
-  builtin.find_files({ cwd = '~/thot' })
-end, { desc = 'Telescope [f]ind [t]hot' })
+return {
+  "nvim-telescope/telescope.nvim",
+  dependencies = { "nvim-lua/plenary.nvim" },
+  keys = {
+    { "<leader>ff", function() require("telescope.builtin").find_files() end, desc = "Telescope [f]ind [f]iles" },
+    { "<leader>fa", function() require("telescope.builtin").find_files({ hidden = true }) end, desc = "Telescope find All files" },
+    { "<leader>fg", function() require("telescope.builtin").live_grep() end, desc = "Telescope live grep" },
+    { "<leader>fb", function() require("telescope.builtin").buffers() end, desc = "Telescope buffers" },
+    { "<leader>fh", function() require("telescope.builtin").help_tags() end, desc = "Telescope help tags" },
+    { "<leader>fd", function() require("telescope.builtin").find_files({hidden = true, cwd = "~/.dotfiles"}) end, desc = "Telescope [f]ind [d]otfiles" },
+    { "<leader>ft", function() require("telescope.builtin").find_files({ cwd = "~/thot" }) end, desc = "Telescope [f]ind [t]hot" },
+  },
+}
