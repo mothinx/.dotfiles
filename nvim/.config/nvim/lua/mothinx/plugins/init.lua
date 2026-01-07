@@ -12,6 +12,7 @@ vim.pack.add({
 	{src = "https://github.com/nvim-treesitter/nvim-treesitter"},
 	{src = "https://github.com/obsidian-nvim/obsidian.nvim"},
 	{src = "https://github.com/stevearc/oil.nvim"},
+	{src = "http://github.com/stevearc/conform.nvim"},
   {src = "https://github.com/Saghen/blink.cmp"},
   -- Themes loader with Omarchy
 	{src = "http://github.com/catppuccin/nvim"},
@@ -29,4 +30,5 @@ require("mothinx.plugins.mini")
 require("mothinx.plugins.oil")
 require("mothinx.plugins.obsidian")
 require("mothinx.plugins.whichkey")
+require("mothinx.plugins.conform")
 

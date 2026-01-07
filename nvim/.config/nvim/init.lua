@@ -8,4 +8,3 @@ vim.g.loaded_netrwPlugin = 1
 
 -- Plugin manager
 require("mothinx.plugins")
-
