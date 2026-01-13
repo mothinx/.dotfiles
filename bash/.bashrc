@@ -30,3 +30,6 @@ if [ -f "/run/.containerenv" ]; then
 fi
 
 export PATH="$HOME/.skim/bin:$PATH"
+
+# opencode
+export PATH=/home/mothinx/.opencode/bin:$PATH

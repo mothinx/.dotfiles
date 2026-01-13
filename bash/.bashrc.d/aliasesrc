@@ -13,3 +13,5 @@ alias gst='git status'
 alias gpl='git pull'
 alias gpu='git push'
 
+# AI
+alias ??='claude --model sonnet -p'
