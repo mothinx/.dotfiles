@@ -1,0 +1,7 @@
+# Binaries and executables
+bin/.local/bin/mise
+bin/.local/bin/bob
+bin/.local/bin/claude
+
+# Temporary files
+TASKS.md
