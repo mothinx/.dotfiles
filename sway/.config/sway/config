@@ -108,4 +108,7 @@ smart_gaps off
 gaps inner 10
 hide_edge_borders smart
 
+### Status Bar
+exec_always --no-startup-id killall -q waybar; waybar
+
 for_window [instance="gamescope"] floating enable, border none, fullscreen enable, focus
