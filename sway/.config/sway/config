@@ -12,10 +12,14 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
 ### Output configuration
 output DP-1 mode 3440x1440@120Hz
-output DP-1 max_render_time off
+output DP-1 max_render_time 1
 output DP-1 allow_tearing yes
 output DP-1 adaptive_sync off
-output DP-2 disable
+
+output DP-2 mode 2560x1440@143.998Hz
+output DP-2 adaptive_sync off  
+output DP-2 max_render_time 1
+output DP-2 position 3440,0
 
 workspace 1 output DP-1
 workspace 2 output DP-1
