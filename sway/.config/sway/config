@@ -20,6 +20,7 @@ output DP-2 mode 2560x1440@143.998Hz
 output DP-2 adaptive_sync off  
 output DP-2 max_render_time 1
 output DP-2 position 3440,0
+#output DP-2 disable
 
 workspace 1 output DP-1
 workspace 2 output DP-1
@@ -43,6 +44,7 @@ bindsym $mod+t exec $term
 bindsym $mod+w kill
 bindsym $mod+Return exec $menu
 bindsym $mod+Shift+b exec "flatpak run com.google.Chrome"
+bindsym $mod+Shift+period exec toolbox run -c dev rofimoji -a copy
 floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed exit. End Wayland session?' -B 'Yes, exit sway' 'swaymsg exit'
