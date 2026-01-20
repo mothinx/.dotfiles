@@ -44,7 +44,8 @@
     "disk": {
         "interval": 30,
         "format": "💾 {percentage_used}%",
-        "path": "/"
+        "path": "/var",
+        "tooltip-format": "{used} / {total} utilisé ({percentage_used}%)"
     },
 
     "network": {
