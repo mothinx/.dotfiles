@@ -9,5 +9,3 @@
 	template = /home/mothinx/.gitmessage
 [init]
 	defaultBranch = main
-[safe]
-	directory = /home/mothinx/code/lazyvim-docker
