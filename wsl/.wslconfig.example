@@ -1,0 +1,16 @@
+# .wslconfig — WSL2 global configuration
+#
+# Place this file at: C:\Users\<user>\.wslconfig  (i.e. /mnt/c/Users/<user>/.wslconfig)
+# Changes take effect after: wsl --shutdown
+#
+# Reference: https://learn.microsoft.com/en-us/windows/wsl/wsl-config
+
+[wsl2]
+memory=8GB          # RAM cap for the WSL2 VM (default: 50% of host RAM)
+processors=4        # vCPU count (default: all host CPUs)
+swap=2GB            # Swap file size (default: 25% of host RAM)
+# swapFile=C:\\Users\\<user>\\AppData\\Local\\Temp\\swap.vhdx
+
+# Disable inheriting the full Windows PATH (speeds up shell startup)
+[interop]
+appendWindowsPath=false

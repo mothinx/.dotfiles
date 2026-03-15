@@ -1,0 +1,17 @@
+# Only load in WSL2
+if ! grep -qi microsoft /proc/version 2>/dev/null; then return; fi
+
+# Interop: selectively expose USERPROFILE to WSL (opt-in, avoids inheriting full Windows PATH)
+export WSLENV=USERPROFILE/p
+
+# Browser: open URLs in Windows default browser
+export BROWSER='explorer.exe'
+
+# Docker: point at Docker Desktop Windows socket
+export DOCKER_HOST="unix:///var/run/docker.sock"
+
+# Fix WSL2 umask (some distros default to 0000)
+umask 022
+
+# SSH agent: uncomment and configure if forwarding from Windows (e.g. 1Password)
+# export SSH_AUTH_SOCK="$HOME/.ssh/agent.sock"

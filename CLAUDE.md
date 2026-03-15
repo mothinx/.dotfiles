@@ -9,25 +9,25 @@ This is a personal dotfiles repository managed with GNU Stow for symlink managem
 ## Architecture
 
 ### Stow-Based Structure
-- Each top-level directory (bash, git, nvim, sway, tmux, waybar, bin) is a stow package
+- Each top-level directory is a stow package (directories prefixed with `_` are excluded)
 - Directory structure within each package mirrors the target structure in `$HOME`
 - Example: `bash/.bashrc` → `~/.bashrc`, `nvim/.config/nvim/` → `~/.config/nvim/`
+- `_archive/` holds retired packages (sway, waybar, kitty) kept for reference only
 
 ### Configuration Topics
 - **bash**: Shell configuration with modular `.bashrc.d/` sourcing pattern
-- **git**: Git configuration and commit message template
-- **nvim**: LazyVim-based Neovim setup (uses lazy.nvim plugin manager)
-- **sway**: Wayland compositor configuration (Sway WM with custom keybindings)
-- **tmux**: Terminal multiplexer configuration
-- **waybar**: Status bar for Wayland (Sway companion)
 - **bin**: Custom utility scripts in `.local/bin/`
+- **git**: Git configuration and commit message template
+- **mise**: Development tool version manager config
+- **nvim**: LazyVim-based Neovim setup (uses lazy.nvim plugin manager)
+- **tmux**: Terminal multiplexer configuration
+- **wsl**: WSL2-specific shell config (`wslrc`) and `.wslconfig.example` reference
 
 ### Key Dependencies
 - **Stow**: Core dependency for symlink management
 - **Neovim with LazyVim**: Plugin framework based on lazy.nvim
-- **Sway + Waybar**: Wayland window manager setup
 - **mise**: Development tool version manager (activated in bash)
-- **starship**: Shell prompt (activated in containerized environments)
+- **starship**: Shell prompt
 - **fd, sk (skim)**: Modern CLI tools for file finding and fuzzy finding
 
 ## Common Commands
@@ -67,8 +67,8 @@ The Neovim setup uses LazyVim as a base configuration:
 
 Bash uses a modular approach:
 - Main `.bashrc` sources all files from `.bashrc.d/`
-- Add new configuration modules as separate files in `bash/.bashrc.d/`
-- Currently includes: `aliasesrc`
+- Add new configuration modules as separate files in `bash/.bashrc.d/` or `wsl/.bashrc.d/`
+- Currently includes: `aliasesrc` (general aliases), `wslrc` (WSL2-only, guarded by `/proc/version` check)
 
 ### Git Configuration
 
@@ -76,7 +76,7 @@ Git uses a custom commit message template at `~/.gitmessage`. The default branch
 
 ## Important Notes
 
-- System is designed for Fedora Atomic Sway
-- Sway configuration includes display-specific settings (DP-1, DP-2) that may need adjustment
+- System targets **Ubuntu on WSL2** (Windows 11)
+- Wayland/Sway/Kitty configs are archived in `_archive/` — not stowed, kept for reference
 - The repository assumes tools like fd, sk, mise are already installed
-- Containerized environments (detected via `/run/.containerenv`) get starship prompt and mise activation
+- `wslrc` is guarded so it only runs inside WSL2 (checks `/proc/version` for "microsoft")
