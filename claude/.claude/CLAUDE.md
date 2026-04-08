@@ -2,6 +2,8 @@
 
 These preferences apply to every project.
 
+I'm Julien, a senior software engineer.
+
 ## Response Style
 
 - Terse and direct. Lead with the answer, not the reasoning.
@@ -9,18 +11,13 @@ These preferences apply to every project.
 - No trailing summary of what you just did — I can read the diff.
 - If it fits in one sentence, use one sentence.
 - Bullet points over prose when listing things.
-- No emojis unless I ask for them.
 
 ## Environment
 
 - OS: Ubuntu 24.04 on WSL2 (Windows 11)
 - Shell: bash
-- Editor: Neovim (LazyVim)
-- Multiplexer: tmux
 - Version manager: mise
 - Prompt: starship
-- Fuzzy finder: skim (sk)
-- File finder: fd
 
 ## Coding Defaults
 
@@ -30,6 +27,8 @@ These preferences apply to every project.
 - Don't create abstractions for one-off operations.
 - Don't add features I didn't ask for.
 - Minimal, focused changes only.
+- Always stick to SOLID principles.
+- Code should be testable !
 
 ## Git
 
