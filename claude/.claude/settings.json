@@ -43,11 +43,19 @@
   "mcpServers": {
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/home/mothinx"]
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/home/mothinx"
+      ]
     },
     "fetch": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-fetch"]
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ]
     }
-  }
+  },
+  "model": "opusplan"
 }
