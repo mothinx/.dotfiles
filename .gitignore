@@ -5,3 +5,6 @@ bin/.local/bin/claude
 
 # Temporary files
 TASKS.md
+
+# Secrets
+bash/.bashrc.d/
