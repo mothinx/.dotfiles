@@ -1,6 +1,7 @@
 ---
 description: Start or continue the weekly review. Creates next week's review file from template and acts as an interactive assistant throughout the checklist.
 allowed-tools: Bash, Read, Edit, Write
+skills: todoist-cli
 ---
 
 Weekly review assistant for Julien. Always respond in French.
@@ -62,61 +63,37 @@ From here, guide the user conversationally through the review:
 
 Keep responses short and focused. One item at a time unless the user batches them.
 
-### Todoist API reference
+### Todoist
 
-API key: `$TODOIST_API_KEY` (stored in `~/.bashrc.d/secretsrc`, always `source` it before calling)
-Base URL: `https://api.todoist.com/api/v1`
-
-**Useful endpoints:**
-- List tasks: `GET /tasks?project_id=<id>` or `?label=<label>`
-- Update task: `POST /tasks/<id>` with JSON body (content, due_string, etc.)
-- Move task: `POST /tasks/<id>/move` with `{"project_id": "<id>"}`
-- Close task: `POST /tasks/<id>/close`
-
-**Known project IDs:**
-| Project | ID |
-|---|---|
-| Inbox | `6CrgFGR6CVpPC2mH` |
-| Action | `6X5HGwHQ3g5FGf4q` |
-| A LIRE | `6VMHGM8h3fhGv6XJ` |
-| SOMEDAY/MAYBE | `6W5XrWrVPQcQCQpR` |
-| Victor | `6X8qm3G7hGcmpP3X` |
-| 🎯 OBJECTIFS 2026 | `6fpMggQ9C82M9j3j` |
-| PROJETS | `6Vm44c4Cf7hh7vvv` |
-| AREAS | `6Vm44h8F5pCFv48R` |
-| 🏠 Maison | `6Vm459Chw3CXqgfM` |
-| 🏦 Finance | `6Vm44r5WfgjvWG4j` |
-| ROUTINES | `6c4QjJrPVHhhxHr8` |
+Always use the `td` CLI for all Todoist interactions. Never use `curl` or the raw API directly.
 
 ### Inbox Todoist (traitement GTD)
 
 When the user reaches the "Vider ta Inbox" item, automatically fetch inbox tasks:
 
 ```bash
-source ~/.bashrc.d/secretsrc && curl -s "https://api.todoist.com/api/v1/tasks?project_id=6CrgFGR6CVpPC2mH" \
-  -H "Authorization: Bearer $TODOIST_API_KEY"
+td inbox
 ```
 
 Process each task one by one in GTD style. For each task, ask: "C'est quoi ? C'est actionnable ?"
 
 Destinations courantes :
-- Lien à lire/regarder → **A LIRE** (`6VMHGM8h3fhGv6XJ`)
-- Action concrète → **Action** (`6X5HGwHQ3g5FGf4q`) + due date si nécessaire
-- Peut-être un jour → **SOMEDAY/MAYBE** (`6W5XrWrVPQcQCQpR`)
-- Concerne Victor → **Victor** (`6X8qm3G7hGcmpP3X`)
-- Doublon ou obsolète → clore (`POST /tasks/<id>/close`)
-- Appartient à un projet existant → déplacer dans le bon projet
+- Lien à lire/regarder → `td task move "<task>" --project "A LIRE"`
+- Action concrète → `td task move "<task>" --project "Action"` + due date si nécessaire (`td task update "<task>" --due "tomorrow"`)
+- Peut-être un jour → `td task move "<task>" --project "SOMEDAY/MAYBE"`
+- Concerne Victor → `td task move "<task>" --project "Victor"`
+- Doublon ou obsolète → `td task complete "<task>"`
+- Appartient à un projet existant → `td task move "<task>" --project "<project>"`
 
 ### Waiting for (liste en attente)
 
-When the user reaches the "Revois la liste waiting for" item, automatically fetch tasks from the Todoist filter via the API:
+When the user reaches the "Revois la liste waiting for" item, automatically fetch tasks:
 
 ```bash
-curl -s "https://api.todoist.com/api/v1/tasks?label=Waiting" \
-  -H "Authorization: Bearer $TODOIST_API_KEY"
+td task list --label Waiting
 ```
 
 Display the tasks found (content + due date if set). Ask the user to review each one:
-- Is it still waiting? → nothing to do
-- Is it done? → offer to complete it via API (`POST /api/v1/tasks/{id}/close`)
-- Is it actionable now? → offer to move it back to inbox (remove the label/filter)
+- Toujours en attente → rien à faire
+- Terminée → `td task complete "<task>"`
+- Actionnable maintenant → `td task update "<task>" --no-labels` (retire le label Waiting)
