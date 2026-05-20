@@ -33,6 +33,20 @@ I'm Julien, a senior software engineer.
 - Always stick to SOLID principles.
 - Code should be testable !
 
+## Plan Mode
+
+When producing a plan, always append a final section **"Questions & Assumptions"** if any of the following exist:
+- Ambiguities or unclear areas in the request
+- Assumptions / deductions made due to missing explicit information
+- Structural choices that require validation before implementing
+
+Section format:
+- **Retained assumptions**: what I assumed to move forward (with reasoning)
+- **Blocking questions**: must be clarified before implementing
+- **Non-blocking questions**: can wait but would benefit from confirmation
+
+Omit the section if everything is clear and unambiguous.
+
 ## Git
 
 - Default branch is `main`.
