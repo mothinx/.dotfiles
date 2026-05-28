@@ -55,3 +55,4 @@ Omit the section if everything is clear and unambiguous.
 - Never amend published commits. Create new commits instead.
 - Never skip hooks (`--no-verify`).
 - Always confirm before force-push, branch deletion, or `git reset --hard`.
+- Never add `Co-Authored-By` trailers in commit messages.

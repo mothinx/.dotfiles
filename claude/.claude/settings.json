@@ -41,6 +41,7 @@
       }
     ]
   },
+  "language": "French",
   "autoCompactEnabled": true,
   "mcpServers": {
     "filesystem": {
@@ -58,6 +59,5 @@
         "@modelcontextprotocol/server-fetch"
       ]
     }
-  },
-  "language": "French"
+  }
 }
