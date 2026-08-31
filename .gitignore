@@ -8,3 +8,12 @@ TASKS.md
 
 # Secrets
 bash/.bashrc.d/
+
+# Claude Code — ignore all runtime state, keep only versioned config
+claude/.claude/*
+!claude/.claude/CLAUDE.md
+!claude/.claude/settings.json
+!claude/.claude/keybindings.json
+!claude/.claude/agents/
+!claude/.claude/commands/
+!claude/.claude/skills/
