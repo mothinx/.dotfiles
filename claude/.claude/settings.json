@@ -1,15 +1,27 @@
 {
-  "model": "opusplan",
+  "model": "sonnet",
   "hooks": {
     "PreToolUse": []
   },
-  "language": "French",
-  "autoCompactEnabled": true,
-  "mcpServers": {
+  "extraKnownMarketplaces": {
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
+    }
   },
-  "voiceEnabled": true,
+  "language": "French",
+  "tui": "fullscreen",
   "voice": {
     "enabled": true,
     "mode": "hold"
+  },
+  "autoCompactEnabled": true,
+  "agentPushNotifEnabled": true,
+  "voiceEnabled": true,
+  "mcpServers": {},
+  "enabledPlugins": {
+    "mattpocock-skills@claude-plugins-official": true
   }
 }
