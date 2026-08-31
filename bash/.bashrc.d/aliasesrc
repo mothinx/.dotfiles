@@ -19,3 +19,4 @@ alias gpu='git push'
 
 # AI
 alias ??='claude --model sonnet -p'
+alias update-tools='update_tools.sh'
