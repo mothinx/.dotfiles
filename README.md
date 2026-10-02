@@ -13,7 +13,6 @@ Each top-level directory is a stow package whose contents are symlinked into `$H
 | `git` | Git config and commit message template |
 | `mise` | Dev tool version manager config |
 | `nvim` | LazyVim-based Neovim setup |
-| `tmux` | Terminal multiplexer config |
 | `wsl` | WSL2-specific shell config and interop settings |
 
 Directories prefixed with `_` (e.g. `_archive/`) are never stowed.
