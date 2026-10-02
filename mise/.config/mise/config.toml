@@ -1,0 +1,6 @@
+[tools]
+glab = "latest"
+go = "latest"
+jq = "latest"
+neovim = "latest"
+node = "latest"
