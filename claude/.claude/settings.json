@@ -1,12 +1,26 @@
 {
-  "model": "sonnet",
+  "model": "opus",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "^(startup|resume|clear|compact|fork)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '/home/mothinx/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
   "statusLine": {
     "type": "command",
     "command": "~/.local/bin/claude_statusline.sh",
     "padding": 0
   },
-  "hooks": {
-    "PreToolUse": []
+  "enabledPlugins": {
+    "mattpocock-skills@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
@@ -22,11 +36,14 @@
     "enabled": true,
     "mode": "hold"
   },
+  "skipDangerousModePermissionPrompt": true,
   "autoCompactEnabled": true,
   "agentPushNotifEnabled": true,
   "voiceEnabled": true,
   "mcpServers": {},
-  "enabledPlugins": {
-    "mattpocock-skills@claude-plugins-official": true
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "medium"
+    }
   }
 }
