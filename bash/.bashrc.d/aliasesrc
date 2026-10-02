@@ -18,5 +18,11 @@ alias gpl='git pull'
 alias gpu='git push'
 
 # AI
+alias cc='claude --permission-mode bypassPermissions'
 alias ??='claude --model sonnet -p'
 alias update-tools='update_tools.sh'
+
+# Dotfiles
+alias dot='cd ~/.dotfiles'
+alias ea='nvim ~/.dotfiles/bash/.bashrc.d/aliasesrc'
+alias reload='source ~/.bashrc'
